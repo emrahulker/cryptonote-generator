@@ -1,27 +1,45 @@
 {
-	"extensions": [ "core/bytecoin.json","bug-fixes.json" , "print-genesis-tx.json" ],
-	"base_coin":{
-		"name":"bytecoin",
-		"git":"https://github.com/amjuarez/bytecoin.git"
-	},
-	"core":{
-		"CRYPTONOTE_NAME":"utsscoin",
-		"CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX":72,
-		"P2P_DEFAULT_PORT":29090,
-		"RPC_DEFAULT_PORT":29091,
-		"SEED_NODES":[],
-                "CHECKPOINTS":[],
-		"P2P_STAT_TRUSTED_PUB_KEY":"4d26c4df7f4ca7037950ad026f9ab36dd05d881952662992f2e4dcfcafbe57eb",
-		"GENESIS_COINBASE_TX_HEX":"010a01ff0001ffffffffffff0f029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd08807121017ded4a5b9be03ebfcdb078220576b39ed21f6a9d290ea26c1f227fe710d019ed",
-		"BYTECOIN_NETWORK":"12345678-1881-1938-1011-001210110111",
-		"MONEY_SUPPLY":"18446744073709551615",
-		"EMISSION_SPEED_FACTOR":18,
-		"DIFFICULTY_TARGET":120,
-		"MINIMUM_FEE":1000000,
-		"DEFAULT_DUST_THRESHOLD":1000000,
-		"CRYPTONOTE_DISPLAY_DECIMAL_POINT":12,
-		"CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW":10,
-		"CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE":20000,
-		"UPGRADE_HEIGHT":1
-	}
+    "base_coin": {
+        "name": "bytecoin",
+        "git": "https://github.com/amjuarez/bytecoin.git"
+    },
+    "core": {
+        "SEED_NODES": [],
+        "EMISSION_SPEED_FACTOR": 18,
+        "DIFFICULTY_TARGET": 160,
+        "CRYPTONOTE_DISPLAY_DECIMAL_POINT": 12,
+        "MONEY_SUPPLY": "18446744073709551615",
+        "GENESIS_BLOCK_REWARD": "0",
+        "DEFAULT_DUST_THRESHOLD": 1000000,
+        "MINIMUM_FEE": 1000000,
+        "CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW": 8,
+        "CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE": 100000,
+        "MAX_TRANSACTION_SIZE_LIMIT": 100000,
+        "CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX": 134,
+        "DIFFICULTY_CUT_V1": 60,
+        "DIFFICULTY_CUT_V2": 60,
+        "DIFFICULTY_CUT": 0,
+        "DIFFICULTY_LAG_V1": 15,
+        "DIFFICULTY_LAG_V2": 15,
+        "DIFFICULTY_LAG": 0,
+        "DIFFICULTY_WINDOW_V1": 540,
+        "DIFFICULTY_WINDOW_V2": 540,
+        "DIFFICULTY_WINDOW": 17,
+        "ZAWY_DIFFICULTY_BLOCK_INDEX": 30,
+        "P2P_DEFAULT_PORT": 19877,
+        "RPC_DEFAULT_PORT": 19878,
+        "BYTECOIN_NETWORK": "27b29156-dc61-572d-ecd4-8069d9b4e552",
+        "CRYPTONOTE_NAME": "utsspay",
+        "DAEMON_NAME": "utsspayd",
+        "GENESIS_COINBASE_TX_HEX": "010a01ff0001ffffffffffff0f029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101ade66bc2b07525db76e849438d1af6a123fa85268b99929fa138b77cf533788b",
+        "CHECKPOINTS": "",
+        "MAX_BLOCK_SIZE_INITIAL": 100000
+    },
+    "extensions": [
+        "core/bytecoin.json",
+        "print-genesis-tx.json",
+        "versionized-parameters.json",
+        "zawy-difficulty-algorithm.json",
+	"bug-fixes.json" , "print-genesis-tx.json"
+    ]
 }
